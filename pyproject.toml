@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "project1"
+version = "0.1.0"
+description = ""
+authors = ["StepanShurmin <shurmin.sa@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^4.2.5"
+psycopg2-binary = "^2.9.7"
+pillow = "^10.0.0"
+
+
+[tool.poetry.group.dev.dependencies]
+ipython = "^8.15.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
