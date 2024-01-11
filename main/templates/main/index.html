@@ -1,32 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Hello, World!</title>
-    <style>
+{% extends 'main/base.html' %}
+{% block content %}
+    <div class="col-12 mb-5">
+        {% if perms.main.add_student %}
+            <a class="btn btn-outline-primary" href="{% url 'main:create_student' %}">Добавить студента</a>
+        {% endif %}
+    </div>
+    {% for object in object_list %}
+        <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+                <div class="card-body">
+                    <p class="card-text">
+                        {% if object.is_active %}
+                            {{ object|title }}.
+                        {% else %}
+                            <span class="text-muted">{{ object|title }}.</span>
+                        {% endif %}
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            {% if perms.main.view_student %}
+                                <a href="{% url 'main:view_student' object.pk %}"
+                                   class="btn btn-sm btn-outline-secondary">View</a>
+                            {% endif %}
+                            {% if perms.main.change_student %}
+                                <a href="{% url 'main:update_student' object.pk %}" type="button"
+                                   class="btn btn-sm btn-outline-secondary">Edit</a>
+                            {% endif %}
+                            {% if user.is_superuser %}
+                                <a href="{% url 'main:delete_student' object.pk %}" type="button"
+                                   class="btn btn-sm btn-outline-danger">Delete</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
 
-html, body {
-    height: 100%;
-}
-
-body {
-    background-image: url("/static/main/images/Earth.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-    </style>
-</head>
-<body>
-    <h1>Hello, World!</h1>
-    <br>
-    <form method="post">
-        {% csrf_token %}
-        <input type="text" name="name" /><br>
-        <input type="email" name="email" /><br>
-        <textarea name="message"></textarea><br>
-        <input type="submit" value="Отправить">
-    </form>
-</body>
-</html>
+{% endblock %}

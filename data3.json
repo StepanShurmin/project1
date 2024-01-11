@@ -1,0 +1,141 @@
+[
+  {
+    "model": "main.student",
+    "pk": 1,
+    "fields": {
+      "first_name": "Иван",
+      "last_name": "Иванов",
+      "avatar": "",
+      "email": null,
+      "is_active": true
+    }
+  },
+  {
+    "model": "main.student",
+    "pk": 2,
+    "fields": {
+      "first_name": "Петр",
+      "last_name": "Петров",
+      "avatar": "",
+      "email": null,
+      "is_active": true
+    }
+  },
+  {
+    "model": "main.student",
+    "pk": 3,
+    "fields": {
+      "first_name": "Семен",
+      "last_name": "Семенов",
+      "avatar": "",
+      "email": null,
+      "is_active": false
+    }
+  },
+  {
+    "model": "main.student",
+    "pk": 4,
+    "fields": {
+      "first_name": "Сидор",
+      "last_name": "Сидоров",
+      "avatar": "",
+      "email": null,
+      "is_active": false
+    }
+  },
+  {
+    "model": "main.student",
+    "pk": 5,
+    "fields": {
+      "first_name": "Иван",
+      "last_name": "Сидоров",
+      "avatar": "",
+      "email": null,
+      "is_active": true
+    }
+  },
+  {
+    "model": "main.student",
+    "pk": 6,
+    "fields": {
+      "first_name": "Петр",
+      "last_name": "Семенов",
+      "avatar": "",
+      "email": null,
+      "is_active": true
+    }
+  },
+  {
+    "model": "main.student",
+    "pk": 7,
+    "fields": {
+      "first_name": "Ivan",
+      "last_name": "Petrov",
+      "avatar": "",
+      "email": null,
+      "is_active": true
+    }
+  },
+  {
+    "model": "main.student",
+    "pk": 8,
+    "fields": {
+      "first_name": "Peter",
+      "last_name": "Ivanov",
+      "avatar": "",
+      "email": null,
+      "is_active": true
+    }
+  },
+  {
+    "model": "main.student",
+    "pk": 9,
+    "fields": {
+      "first_name": "Semen",
+      "last_name": "Semenov",
+      "avatar": "",
+      "email": null,
+      "is_active": true
+    }
+  },
+  {
+    "model": "main.student",
+    "pk": 10,
+    "fields": {
+      "first_name": "Sidor",
+      "last_name": "Sidorov",
+      "avatar": "",
+      "email": null,
+      "is_active": true
+    }
+  },
+  {
+    "model": "main.student",
+    "pk": 11,
+    "fields": {
+      "first_name": "test2",
+      "last_name": "test2",
+      "avatar": "",
+      "email": "123@sky.pro",
+      "is_active": true
+    }
+  },
+  {
+    "model": "main.subject",
+    "pk": 1,
+    "fields": {
+      "title": "django",
+      "description": "django",
+      "student": 11
+    }
+  },
+  {
+    "model": "main.subject",
+    "pk": 2,
+    "fields": {
+      "title": "django2",
+      "description": "django2",
+      "student": 11
+    }
+  }
+]
